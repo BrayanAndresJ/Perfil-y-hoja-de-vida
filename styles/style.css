@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --color-primario: #161312;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: darkcyan;
+
+    --fuente-monserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header {
+    display: flex;
+    justify-content: left; /* Centra el contenido en pantallas grandes también */
+    padding: 1% 15%; /* Ajusta el padding como necesites */
+}
+
+.header-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.header-menu-link {
+    font-family: var(--fuente-krona);
+    font-size: 1rem;
+    font-weight: normal; /* Cambiado de 100px a normal, ya que el peso no es una medida de px */
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.header-menu-link:hover {
+    color: var(--color-secundario);
+}
+
+.presentacion {
+    padding: 1% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.presentacion-contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.presentacion-contenido-titulo {
+    font-size: 1.8rem;
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destacado {
+    color: var(--color-terciario);
+}
+
+.presentacion-contenido-texto {
+    font-size: 1.25rem;
+    font-family: var(--fuente-monserrat);
+}
+
+.presentacion-enlace {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 26px;
+}
+
+.presentacion-enlaces-subtitulo {
+    font-family: var(--fuente-krona);
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.presentacion-enlaces-link {
+    display: flex;
+    gap: 30px;
+    border: 3px solid var(--color-terciario);
+    width: 50%;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 1.25rem;
+    font-weight: 500; /* Cambiado de 500px a 500, ya que el peso no es una medida de px */
+    padding: 10.5px;
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-family: var(--fuente-monserrat);
+}
+
+.presentacion-enlaces-link:hover {
+    background-color: var(--color-hover);
+}
+
+.footer {
+    color: var(--color-secundario);
+    background-color: var(--color-terciario);
+    padding: 1%;
+    text-align: center;
+    font-family: var(--fuente-monserrat);
+    font-size: 1.25rem;
+    font-weight: 280;
+}
+
+.presentacion-foto-perfil {
+    width: 40%;
+}
+
+/* Media query para pantallas de hasta 1200px */
+@media (max-width: 1200px) {
+    .header {
+        padding: 2% 10%; /* Ajusta el padding para centrar mejor */
+    }
+
+    .header-menu {
+        width: 100%;
+        justify-content: center; /* Centra el contenido del menú */
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+    }
+
+    .presentacion-contenido, .presentacion-foto-perfil {
+        width: auto;
+    }
+
+    .presentacion-enlaces-link {
+        width: 100%;
+        max-width: 250px; /* Para evitar que los enlaces se expandan demasiado */
+    }
+}
